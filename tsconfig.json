@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "esnext",
+    "moduleResolution": "nodenext",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ],
+    // "baseUrl": ".",
+    "allowJs": true,
+    "jsx": "react",
+    "strict": true,
+    "esModuleInterop": true
+  }
+}
