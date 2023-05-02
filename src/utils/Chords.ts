@@ -1,4 +1,6 @@
 // Chords.ts
+
+import cb from "./ChordBook.json"
 export interface ChordShapeData {
   E2: number
   A2: number
@@ -43,7 +45,11 @@ export class Chord {
   constructor(key: string, name: string, shapesData: ChordShapeData[]) {
     this.key = key
     this.name = name
+    console.log('key', key)
+    console.log('name', name)
+    console.log('shapesData', shapesData)
     this.shapes = shapesData.map(shapeData => new ChordShape(shapeData))
+    console.log('this.shapes', this.shapes)
   }
 }
 
@@ -69,11 +75,13 @@ export class ChordBook {
 }
 
 export async function getChords(): Promise<ChordData> {
-  const request = new Request('chords-data.json', {
-    headers: {
-      'Accept': 'application/json',
-    },
-  })
-  const data = await fetch(request).then((response) => response.json())
+  // const request = new Request('chords-data.json', {
+  //   headers: {
+  //     'Accept': 'application/json',
+  //   },
+  // })
+  // const data = await fetch('chords-data.json').then((response) => response.json())
+  const data = cb as unknown as ChordData
+  console.log('data', data)
   return data
 }
