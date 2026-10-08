@@ -47,4 +47,4 @@ You can customize the list of available chords by modifying the `ChordBook.json`
 
 ## License
 
-This project is available under the [ISC License](./LICENSE). Feel free to use, modify, and distribute the code as needed.
+This project is licensed under the ISC License, as declared in `package.json`. Feel free to use, modify, and distribute the code as needed.
